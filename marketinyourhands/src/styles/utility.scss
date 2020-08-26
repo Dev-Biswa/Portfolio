@@ -1,11 +1,31 @@
-.font-weight-medium {
-  font-weight: 600;
-}
+@import "./variables.scss";
 
 .opacity-60 {
   opacity: 0.6;
 }
 
+.bg-white {
+  background-color: $color--white;
+}
+
+.theme-color {
+  color: $color--theme !important;
+}
+
+// --font-weight
+
+.font-weight-medium {
+  font-weight: 600;
+}
+
+// --font-size
+
 .font-size-xs {
   font-size: 0.75rem;
+}
+.font-size-sm {
+  font-size: 0.875rem;
+}
+.font-size-md {
+  font-size: 0.9375rem;
 }

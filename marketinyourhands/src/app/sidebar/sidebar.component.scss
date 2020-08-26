@@ -105,6 +105,13 @@
   }
 }
 
+.nav-link-style {
+  color: #4b566b;
+  &:hover {
+    color: #fe696a;
+  }
+}
+
 @media (max-width: 991.98px) {
   .mh-sidebar.show {
     left: 0;

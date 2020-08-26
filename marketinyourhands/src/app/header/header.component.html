@@ -1,5 +1,5 @@
-<header class="bg-light box-shadow-header fixed-top">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<header class="bg-white box-shadow-header fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <a class="navbar-brand" href="#">
       <img
         src="../../assets/images/logo-dark.png"
@@ -9,7 +9,7 @@
       />
     </a>
 
-    <div class="input-group d-none d-lg-flex">
+    <div class="input-group d-none d-lg-flex mx-4">
       <div class="input-group-prepend">
         <span class="input-group-text input-group-icon" id="basic-addon1"
           ><i class="fas fa-search"></i
@@ -30,8 +30,9 @@
           <option
             *ngFor="let category of categoryOptions"
             [ngValue]="category.value"
-            >{{ category.label }}</option
           >
+            {{ category.label }}
+          </option>
         </select>
       </div>
     </div>
@@ -72,7 +73,7 @@
         </div>
       </a>
       <div class="navbar-tool dropdown ml-3">
-        <a class="navbar-tool-icon-box">
+        <a class="navbar-tool-icon-box bg-light">
           <span class="navbar-tool-label">0</span>
           <i class="fas fa-shopping-cart"></i>
         </a>
@@ -82,7 +83,7 @@
   </nav>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <div class="pt-2 pb-4">
-      <div class="container">
+      <div class="container-fluid">
         <div class="input-group d-sm-flex d-lg-none">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1"

@@ -9,3 +9,51 @@ body {
 .p-tooltip {
   z-index: 1040 !important;
 }
+
+//--social-buttn
+.social-btn {
+  display: inline-block;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out, color 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
+  border-radius: 0.3125rem;
+  background-color: #f3f5f9;
+  color: #4b566b;
+  font-size: 0.875rem;
+  text-align: center;
+  text-decoration: none !important;
+  i {
+    line-height: 2.125rem;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.sb-outline {
+  border-color: #e3e9ef;
+  background-color: transparent;
+  &:hover {
+    border-color: transparent;
+  }
+}
+
+.sb-twitter:hover {
+  background-color: #1da1f2;
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(29, 161, 242, 0.9);
+}
+.sb-facebook:hover {
+  background-color: #3b5998;
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(59, 89, 152, 0.9);
+}
+.sb-instagram:hover {
+  background-color: #5851db;
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(88, 81, 219, 0.9);
+}
+.sb-youtube:hover {
+  background-color: #ff0000;
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(255, 0, 0, 0.9);
+}
