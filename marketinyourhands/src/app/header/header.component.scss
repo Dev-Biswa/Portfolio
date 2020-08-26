@@ -76,6 +76,15 @@ a:hover {
     border-left: 0.275em solid transparent;
 }
 
+.header {
+    .navbar {
+        padding: 0rem 1rem;
+        .navbar-brand {
+            padding: 0;
+        }
+    }
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg {
         .navbar-tool-text {
