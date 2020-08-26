@@ -8,12 +8,17 @@ import { CategoryLu } from "../Models/categoryLu.model";
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
+  constructor() {}
   categoryOptions: CategoryLu[] = [];
   selectedCategory: number;
 
   ngOnInit(): void {
     this.initLookup();
     this.selectedCategory = 1;
+  }
+
+  toggleNavigation() {
+    document.getElementById("mhSidebar").classList.add("show");
   }
 
   private initLookup(): void {

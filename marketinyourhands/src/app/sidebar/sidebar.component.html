@@ -1,0 +1,141 @@
+<aside
+  class="mh-sidebar mh-sidebar-fixed"
+  style="padding-top: 5rem"
+  id="mhSidebar"
+>
+  <button class="close" type="button" (click)="closeSidebar()">
+    <span class="d-inline-block font-size-xs font-weight-normal align-middle"
+      >Close sidebar</span
+    ><span class="d-inline-block align-middle ml-2" aria-hidden="true">×</span>
+  </button>
+  <div class="mh-sidebar-inner">
+    <ul
+      class="nav nav-tabs nav-justified mt-2 mt-lg-4 mb-0"
+      id="pills-tab"
+      role="tablist"
+      style="min-height: 3rem"
+    >
+      <li class="nav-item">
+        <a
+          class="nav-link font-weight-medium active"
+          id="pills-home-tab"
+          data-toggle="pill"
+          href="#pills-home"
+          role="tab"
+          aria-controls="pills-home"
+          aria-selected="true"
+          >Categories</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link font-weight-medium"
+          id="pills-profile-tab"
+          data-toggle="pill"
+          href="#pills-profile"
+          role="tab"
+          aria-controls="pills-profile"
+          aria-selected="false"
+          >Menu</a
+        >
+      </li>
+    </ul>
+    <div class="scrollable-area">
+      <div class="tab-content" id="pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="pills-home"
+          role="tabpanel"
+          aria-labelledby="pills-home-tab"
+        >
+          <div class="accordion" id="accordionExample">
+            <div
+              class="card"
+              *ngFor="let category of categories; let i = index"
+            >
+              <div class="card-header" id="heading{{ i }}">
+                <h3 class="mb-0 accordion-header">
+                  <a
+                    class="d-flex align-items-center justify-content-between"
+                    type="button"
+                    data-toggle="collapse"
+                    [attr.data-target]="'#collapse' + i"
+                    aria-expanded="true"
+                    [attr.aria-controls]="'collapse' + i"
+                  >
+                    <span>
+                      <i class="{{ category.icon }} opacity-60 mt-n1 mr-2"></i>
+                      {{ category.value }}
+                    </span>
+                    <span class="accordion-indicator">
+                      <i
+                        class="fas fa-angle-down"
+                        style="position: relative; left: 6px; top: 2px"
+                      ></i>
+                    </span>
+                  </a>
+                </h3>
+              </div>
+
+              <div
+                id="collapse{{ i }}"
+                class="collapse"
+                [attr.aria-labelledby]="'heading' + i"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body" *ngFor="let submenu of category.submenu">
+                  <a href="#">{{ submenu.value }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="pills-profile"
+          role="tabpanel"
+          aria-labelledby="pills-profile-tab"
+        >
+          <div class="accordion" id="accordionMenu">
+            <div class="card" *ngFor="let menu of menuItems; let i = index">
+              <div class="card-header" id="menuheading{{ i }}">
+                <h3 class="mb-0 accordion-header">
+                  <a
+                    class="d-flex align-items-center justify-content-between"
+                    type="button"
+                    data-toggle="collapse"
+                    [attr.data-target]="'#menucollapse' + i"
+                    aria-expanded="true"
+                    [attr.aria-controls]="'menucollapse' + i"
+                  >
+                    <span>
+                      <i class="{{ menu.icon }} opacity-60 mt-n1 mr-2"></i>
+                      {{ menu.value }}
+                    </span>
+                    <span class="accordion-indicator">
+                      <i
+                        class="fas fa-angle-down"
+                        style="position: relative; left: 6px; top: 2px"
+                      ></i>
+                    </span>
+                  </a>
+                </h3>
+              </div>
+
+              <div
+                id="menucollapse{{ i }}"
+                class="collapse"
+                [attr.aria-labelledby]="'menuheading' + i"
+                data-parent="#accordionMenu"
+              >
+                <div class="card-body" *ngFor="let submenu of menu.submenu">
+                  <a href="#">{{ submenu.value }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>

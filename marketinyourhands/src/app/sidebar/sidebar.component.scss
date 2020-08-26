@@ -1,0 +1,130 @@
+@import "../../styles/mixins.scss";
+
+.mh-sidebar {
+  width: 100%;
+  max-width: 22rem;
+  background-color: #fff;
+  .close {
+    font-size: 1.75rem;
+    font-weight: 300;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.mh-sidebar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-right: 1px solid #e3e9ef;
+  .close {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    padding: 1rem 1.875rem;
+    border-bottom: 1px solid #e3e9ef;
+    background-color: #f6f9fc;
+    float: none;
+  }
+}
+
+.mh-sidebar-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollable-area {
+  max-height: 50%;
+  overflow: auto;
+}
+
+.nav-tabs {
+  .nav-link {
+    position: relative;
+    border: 0;
+    color: #4b566b;
+    padding: 0.75rem 1.25rem;
+  }
+  .nav-link:hover {
+    color: #fe696a;
+  }
+  .nav-link.active {
+    color: #fe696a;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #fe696a;
+    border-bottom: 1px solid;
+  }
+}
+
+.accordion {
+  .card {
+    border-right: none;
+  }
+  .card-header {
+    background-color: white;
+  }
+
+  .card-body {
+    padding: 0.25rem 2rem;
+    a {
+      color: #4b566b;
+      font-size: 16px;
+      &:hover {
+        color: #fe696a;
+      }
+    }
+  }
+
+  .accordion-indicator {
+    background-color: #f3f5f9;
+    color: #4b566b;
+    width: 1.375rem;
+    height: 1.375rem;
+    line-height: 1.375rem;
+    border-radius: 50%;
+  }
+}
+.accordion-header {
+  a {
+    color: #4b566b;
+    font-size: 16px;
+    &:hover {
+      color: #fe696a;
+      .accordion-indicator {
+        background-color: rgba(254, 105, 106, 0.1);
+        color: #fe696a;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .mh-sidebar.show {
+    left: 0;
+    box-shadow: 1.375rem 0 2rem -0.75rem rgba(43, 52, 69, 0.15) !important;
+  }
+  .mh-sidebar-fixed {
+    padding-top: 3.5rem !important;
+    .close {
+      display: block;
+    }
+  }
+  .mh-sidebar {
+    position: fixed;
+    top: 0;
+    left: -22rem;
+    height: 100%;
+    transition: left 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.25s, box-shadow 0.3s 0.25s;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    z-index: 1035;
+  }
+}

@@ -1,15 +1,21 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable({
   providedIn: "root",
 })
 export class UserService {
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
-  readonly rootURL = "http://localhost:64991/api";
+  private displaySidebar = new BehaviorSubject<boolean>(true);
 
-  //   postUser(user: User) {
-  //     return this.http.post(this.rootURL + '/User/CreateUser' , user);
-  //   }
+  public readonly displaySidebar$ = this.displaySidebar.asObservable();
+
+  public setDisplaySidebar(data: boolean) {
+    this.displaySidebar.next(data);
+  }
+
+  public getDisplaySidebar() {
+    return this.displaySidebar;
+  }
 }

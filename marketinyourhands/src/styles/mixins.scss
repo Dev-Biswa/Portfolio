@@ -1,0 +1,23 @@
+@mixin customscrollbar() {
+  // Width
+  ::-webkit-scrollbar {
+    height: 6px;
+    position: fixed;
+    width: 3px;
+    z-index: 20;
+  }
+
+  // Track
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  // Handle
+  ::-webkit-scrollbar-thumb {
+    background: rgb(189, 189, 189);
+    border-radius: 10px;
+    &:hover {
+      background: rgb(153, 153, 153);
+    }
+  }
+}
