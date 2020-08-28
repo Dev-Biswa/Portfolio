@@ -19,8 +19,16 @@
   background-color: $bg-light-black !important;
 }
 
+.bg-light-gray {
+  background-color: $bg-light-gray !important;
+}
+
 .theme-color {
   color: $color--theme !important;
+}
+
+.border-color {
+  color: #e3e9ef !important;
 }
 
 // --font-weight

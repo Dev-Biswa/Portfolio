@@ -16,13 +16,17 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     component.FooterComponent,
     component.SideBarComponent,
     component.HomeComponent,
+    component.ProductSlideComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    primeng.TooltipModule,
     FormsModule,
     BrowserAnimationsModule,
+
+    // primeng
+    primeng.TooltipModule,
+    primeng.CarouselModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent],

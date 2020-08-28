@@ -1,1 +1,11 @@
 <router-outlet></router-outlet>
+
+<a
+  class="btn-scroll-top"
+  *ngIf="isShow"
+  (click)="gotoTop()"
+  [ngClass]="{ show: isShow }"
+>
+  <span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span>
+  <i class="fas fa-angle-up btn-scroll-top-icon"></i>
+</a>
