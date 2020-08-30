@@ -66,6 +66,16 @@ body {
   line-height: 2.625rem;
 }
 
+.btn-outline-accent {
+  color: #4e54c8 !important;
+  border-color: #4e54c8 !important;
+  &:hover {
+    color: #fff !important;
+    background-color: #4e54c8;
+    border-color: #4e54c8 !important;
+  }
+}
+
 //--social-buttn
 .social-btn {
   display: inline-block;

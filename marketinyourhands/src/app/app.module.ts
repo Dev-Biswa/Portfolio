@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     // primeng
     primeng.TooltipModule,
     primeng.CarouselModule,
+    primeng.ButtonModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent],
