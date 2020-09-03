@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import * as primeng from "primeng";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import * as component from "./index";
 import { UserService } from "./services/user.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -17,17 +17,21 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     component.SideBarComponent,
     component.HomeComponent,
     component.ProductSlideComponent,
+    component.SignUpDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
 
     // primeng
     primeng.TooltipModule,
     primeng.CarouselModule,
     primeng.ButtonModule,
+    primeng.DialogModule,
+    primeng.TabViewModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent],

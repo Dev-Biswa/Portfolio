@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   constructor() {}
   categoryOptions: CategoryLu[] = [];
   selectedCategory: number;
+  displayDialog: boolean;
 
   ngOnInit(): void {
     this.initLookup();
@@ -29,5 +30,13 @@ export class HeaderComponent implements OnInit {
       { value: 4, label: "Diary and Eggs" },
       { value: 5, label: "Meat and Poultry" },
     ];
+  }
+
+  openSignUpDialog() {
+    this.displayDialog = true;
+  }
+
+  displayChangeHandler(event) {
+    this.displayDialog = event;
   }
 }

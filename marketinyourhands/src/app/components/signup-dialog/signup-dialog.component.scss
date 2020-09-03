@@ -1,0 +1,61 @@
+.sign-up-dialog {
+    .p-dialog-mask {
+        background: #1b1b1ba8;
+    }
+    .p-dialog {
+        .p-dialog-header {
+            padding: 0.5rem;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            .p-dialog-header-close {
+                position: absolute;
+                right: 0;
+                top: 22px;
+                .pi {
+                    font-size: 10px;
+                }
+            }
+            .p-dialog-header-icon:enabled:hover {
+                background: transparent;
+            }
+            .p-dialog-header-icon:focus {
+                box-shadow: 0 0 0 0;
+            }
+        }
+
+        .p-dialog-content {
+            padding: 0;
+        }
+    }
+
+    .p-tabview {
+        .p-tabview-nav {
+            padding-left: 1.25rem;
+
+            li {
+                .p-tabview-nav-link {
+                    padding-bottom: 0.9rem;
+                    align-items: baseline;
+                    &:focus {
+                        box-shadow: 0 0 0 0;
+                    }
+                }
+            }
+            li.p-highlight {
+                .p-tabview-nav-link {
+                    background: #ffffff;
+                    border-color: #fe696a;
+                    color: #fe696a;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .sign-up-dialog {
+        .p-dialog {
+            width: 35vw;
+        }
+    }
+}

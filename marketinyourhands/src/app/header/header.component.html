@@ -59,7 +59,7 @@
           <i class="far fa-heart" pTooltip="wishlist" tooltipPosition="top"></i>
         </div>
       </a>
-      <a class="navbar-tool">
+      <a class="navbar-tool" (click)="openSignUpDialog()">
         <div class="navbar-tool-icon-box">
           <i class="far fa-user"></i>
         </div>
@@ -95,3 +95,9 @@
     </div>
   </div>
 </header>
+
+<app-sign-up
+  *ngIf="displayDialog"
+  [displayDialog]="displayDialog"
+  (close)="displayChangeHandler($event)"
+></app-sign-up>

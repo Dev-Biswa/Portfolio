@@ -10,10 +10,10 @@ import { eInventoryStatus } from "src/app/Enums/eInventoryStatus";
 })
 export class ProductSlideComponent implements OnInit {
   responsiveOptions: any[];
-  products: Product[] = [];
   eInventoryStatus = eInventoryStatus;
 
   @Input() heading: string = "";
+  @Input() products: Product[] = [];
 
   ngOnInit(): void {
     this.responsiveOptions = [
@@ -31,53 +31,6 @@ export class ProductSlideComponent implements OnInit {
         breakpoint: "560px",
         numVisible: 1,
         numScroll: 1,
-      },
-    ];
-    this.getProducts();
-  }
-  private getProducts(): void {
-    this.products = [
-      {
-        name: "Coconut, Indonesia",
-        price: 100,
-        image: "product01.jpg",
-        inventoryStatus: eInventoryStatus.InStock,
-      },
-      {
-        name: "Soft Creme Cheese",
-        price: 200,
-        image: "product02.jpg",
-        inventoryStatus: eInventoryStatus.InStock,
-      },
-      {
-        name: "Pepsi Soda Can",
-        price: 50,
-        image: "product03.jpg",
-        inventoryStatus: eInventoryStatus.InStock,
-      },
-      {
-        name: "Fresh Orange",
-        price: 50,
-        image: "product04.jpg",
-        inventoryStatus: eInventoryStatus.InStock,
-      },
-      {
-        name: "Moisture Body Lotion",
-        price: 50,
-        image: "product05.jpg",
-        inventoryStatus: eInventoryStatus.InStock,
-      },
-      {
-        name: "Nut Chocolate Paste",
-        price: 50,
-        image: "product06.jpg",
-        inventoryStatus: eInventoryStatus.InStock,
-      },
-      {
-        name: "Mozzarella Mini Cheese",
-        price: 50,
-        image: "product07.jpg",
-        inventoryStatus: eInventoryStatus.InStock,
       },
     ];
   }

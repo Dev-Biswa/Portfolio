@@ -19,13 +19,19 @@
     [responsiveOptions]="responsiveOptions"
     [circular]="true"
   >
-    <!-- <ng-template pTemplate="header">
-      <h5>Basic</h5>
-    </ng-template> -->
     <ng-template let-product pTemplate="item">
-      <div class="product-item">
+      <div class="product-item card product-card pb-3">
         <div class="product-item-content">
-          <div class="p-mb-3">
+          <span class="badge badge-theme badge-shadow"> Sale</span>
+          <button
+            class="btn-wishlist btn-sm"
+            type="button"
+            pTooltip="Add to wishlist"
+            tooltipPosition="left"
+          >
+            <i class="far fa-heart"></i>
+          </button>
+          <div class="p-mb-3 card-image">
             <img
               src="../../../assets/images/{{ product.image }}"
               [alt]="product.name"
@@ -34,27 +40,18 @@
               height="157"
             />
           </div>
-          <div>
-            <h4 class="p-mb-1">{{ product.name }}</h4>
-            <h6 class="p-mt-0 p-mb-3">${{ product.price }}</h6>
-            <span>{{ eInventoryStatus[product.inventoryStatus] }}</span>
-            <div class="car-buttons p-mt-5">
-              <p-button
-                type="button"
-                styleClass="p-button p-button-rounded p-mr-2"
-                icon="pi pi-search"
-              ></p-button>
-              <p-button
-                type="button"
-                styleClass="p-button-success p-button-rounded p-mr-2"
-                icon="pi pi-star"
-              ></p-button>
-              <p-button
-                type="button"
-                styleClass="p-button-help p-button-rounded"
-                icon="pi pi-cog"
-              ></p-button>
+          <div class="card-body">
+            <h3 class="product-title font-size-sm">
+              <a href="#">{{ product.name }}</a>
+            </h3>
+            <div class="product-price">
+              <span class="text-accent"> ₹{{ product.price }} </span>
             </div>
+          </div>
+          <div class="product-floating-btn">
+            <button class="btn btn-theme btn-shadow" type="button">
+              <i class="fas fa-cart-plus font-size-base"></i>
+            </button>
           </div>
         </div>
       </div>

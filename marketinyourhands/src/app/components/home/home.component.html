@@ -171,5 +171,12 @@
       </div>
     </div>
   </section>
-  <app-product-slide [heading]="'Discounted Products'"></app-product-slide>
+  <app-product-slide
+    [heading]="'Discounted Products'"
+    [products]="discountedProducts"
+  ></app-product-slide>
+  <app-product-slide
+    [heading]="'Bestsellers'"
+    [products]="bestSellingProducts"
+  ></app-product-slide>
 </div>

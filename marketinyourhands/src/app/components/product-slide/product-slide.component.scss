@@ -1,0 +1,103 @@
+.p-carousel-content {
+  .p-carousel-item {
+    padding-right: 16px;
+  }
+}
+.product-card {
+  border: 0;
+  transition: all 0.15s ease-in-out;
+  .card-body {
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+  }
+  .card-image {
+    width: 100%;
+    text-align: center;
+  }
+  .badge {
+    position: absolute;
+    top: 0.75rem;
+    right: auto;
+    left: 0.75rem;
+    z-index: 5;
+    font-weight: 400;
+  }
+  .btn-wishlist {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 5;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.product-floating-btn {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+  z-index: 10;
+}
+
+.product-card:hover .product-floating-btn {
+  opacity: 1;
+}
+
+.product-title {
+  a {
+    transition: color 0.25s ease-in-out;
+    color: #373f50;
+    text-decoration: none !important;
+    &:hover {
+      color: #fe696a;
+    }
+  }
+}
+
+.btn-shadow {
+  box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(254, 105, 106, 0.9);
+}
+.btn-shadow:hover {
+  box-shadow: none;
+}
+
+.badge-theme.badge-shadow {
+  box-shadow: 0 0.5rem 1.125rem -0.275rem rgba(243, 71, 112, 0.9);
+}
+@media (min-width: 576px) {
+  .product-card {
+    padding-bottom: 0;
+  }
+}
+
+// overriding primeng css
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: #fe696a;
+}
+.p-link:focus {
+  box-shadow: 0 0 0 0.2rem rgb(255 198 211);
+}
+.p-carousel .p-carousel-content {
+  .p-carousel-prev,
+  .p-carousel-next {
+    background: #fff;
+    border: 1px solid #fe696a;
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgb(255 198 211);
+    }
+    &:enabled:hover {
+      background: #fff;
+      border: 1px solid #fe696a;
+    }
+  }
+}
+
+.btn-wishlist.btn-sm {
+  width: 2rem;
+  height: 2rem;
+}

@@ -31,6 +31,10 @@
   color: #e3e9ef !important;
 }
 
+.text-accent {
+  color: #4e54c8 !important;
+}
+
 // --font-weight
 
 .font-weight-medium {
@@ -80,4 +84,11 @@
 
 .widget-light .widget-list-link:hover {
   color: #fff;
+}
+
+.p-tooltip {
+  .p-tooltip-text {
+    padding: 6px !important;
+    font-size: 12px;
+  }
 }
