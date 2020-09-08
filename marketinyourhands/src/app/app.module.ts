@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     component.HomeComponent,
     component.ProductSlideComponent,
     component.SignUpDialogComponent,
+    component.SingleProductComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +33,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     primeng.ButtonModule,
     primeng.DialogModule,
     primeng.TabViewModule,
+    primeng.BreadcrumbModule,
+    primeng.GalleriaModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent],

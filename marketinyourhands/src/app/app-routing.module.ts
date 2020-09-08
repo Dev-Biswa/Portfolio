@@ -13,6 +13,10 @@ const appRoutes: Routes = [
         path: "home",
         component: component.HomeComponent,
       },
+      {
+        path: "single",
+        component: component.SingleProductComponent,
+      },
     ],
   },
 ];

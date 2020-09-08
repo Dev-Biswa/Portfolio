@@ -14,6 +14,7 @@ export class ProductSlideComponent implements OnInit {
 
   @Input() heading: string = "";
   @Input() products: Product[] = [];
+  @Input() isShowHeader = true;
 
   ngOnInit(): void {
     this.responsiveOptions = [

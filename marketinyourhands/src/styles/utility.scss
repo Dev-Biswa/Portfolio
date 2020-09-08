@@ -52,6 +52,9 @@
 .font-size-md {
   font-size: 0.9375rem;
 }
+.font-size-lg {
+  font-size: 1.125rem !important;
+}
 .font-size-base {
   font-size: 1rem !important;
 }
@@ -91,4 +94,13 @@
     padding: 6px !important;
     font-size: 12px;
   }
+}
+
+.form-control:focus {
+  color: #4b566b !important;
+  background-color: #fff !important;
+  border-color: rgba(254, 105, 106, 0.3) !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 0 transparent,
+    0 0.375rem 0.625rem -0.3125rem rgba(254, 105, 106, 0.15) !important;
 }

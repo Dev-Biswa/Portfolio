@@ -21,6 +21,17 @@ body {
   }
 }
 
+.btn-gray {
+  color: #4b566b !important;
+  border-color: transparent;
+  background-color: #f3f5f9 !important;
+  &:hover {
+    color: #4b566b !important;
+    border-color: transparent;
+    background-color: #d1d9e8 !important;
+  }
+}
+
 .badge-theme {
   color: #fff;
   background-color: #f34770;

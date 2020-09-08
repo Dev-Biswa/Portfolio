@@ -1,0 +1,88 @@
+<div class="px-3 pt-2">
+  <!-- breadcrumb -->
+  <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+  <section class="row no-gutters mx-n2 pb-5 mb-xl-3">
+    <div class="col-xl-7 px-2 mb-3">
+      <div class="h-100 bg-white rounded-lg p-4">
+        <p-galleria
+          [(value)]="images"
+          [responsiveOptions]="responsiveOptions"
+          [containerStyle]="{ 'max-width': '660px' }"
+          [numVisible]="3"
+          [thumbnailsPosition]="'left'"
+          [showThumbnailNavigators]="false"
+        >
+          <ng-template pTemplate="item" let-item>
+            <img
+              [src]="item.previewImageSrc"
+              style="width: 100%; display: block"
+            />
+          </ng-template>
+          <ng-template pTemplate="thumbnail" let-item>
+            <div class="p-grid p-nogutter p-justify-center">
+              <img [src]="item.thumbnailImageSrc" height="78" width="78" />
+            </div>
+          </ng-template>
+        </p-galleria>
+      </div>
+    </div>
+    <div class="col-xl-5 px-2 mb-3">
+      <div class="h-100 bg-white rounded-lg p-4">
+        <a class="product-meta d-block font-size-sm pb-2" href="#"
+          >Packets, Cereals</a
+        >
+        <h1 class="h3">Muesli Fitness Nutritious Energy, Gluten Free (500g)</h1>
+        <div class="h4 font-weight-normal text-accent">₹400</div>
+        <div class="form-group d-flex flex-wrap align-items-center pt-4 pb-2">
+          <select class="custom-select mr-3 mb-3" style="width: 5rem">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <button class="btn btn-theme btn-shadow mr-3 mb-3" type="submit">
+            <i class="fas fa-shopping-cart font-size-lg mr-2"></i>Add to Cart
+          </button>
+          <button
+            class="btn btn-icon btn-gray mb-3"
+            type="submit"
+            pTooltip="Add to wishlist"
+            tooltipPosition="top"
+          >
+            <i class="far fa-heart font-size-lg"></i>
+          </button>
+        </div>
+        <h6>Product description</h6>
+        <ul class="list-unstyled font-size-sm pt-2 mb-0">
+          <li>
+            <i class="far fa-check-circle text-success mr-2"></i>Natural
+            ingredients
+          </li>
+          <li>
+            <i class="far fa-check-circle text-success mr-2"></i>No dyes and
+            flavor enhancers
+          </li>
+          <li>
+            <i class="far fa-check-circle text-success mr-2"></i>Gluten free
+          </li>
+          <li>
+            <i class="far fa-check-circle text-success mr-2"></i>Vitamins B2,
+            B3, B5 and B6
+          </li>
+          <li>
+            <i class="far fa-check-circle text-success mr-2"></i>Tastes better
+            with milk
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="pb-5 mb-2 mb-xl-4">
+    <h2 class="h3 pb-2 mb-grid-gutter text-center">You may also like</h2>
+    <app-product-slide
+      [isShowHeader]="false"
+      [products]="bestSellingProducts"
+    ></app-product-slide>
+  </section>
+</div>
