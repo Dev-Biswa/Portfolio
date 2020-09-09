@@ -1,7 +1,7 @@
 <p-dialog
   [(visible)]="displayDialog"
   [baseZIndex]="10000"
-  (onHide)="onHide()"
+  (onHide)="onHide($event)"
   class="sign-up-dialog"
 >
   <p-tabView>
