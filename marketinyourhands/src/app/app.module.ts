@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     component.ProductSlideComponent,
     component.SignUpDialogComponent,
     component.SingleProductComponent,
+    component.CheckOutComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,114 @@
+<div class="px-3 pt-2">
+  <!-- breadcrumb -->
+  <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+  <section class="row no-gutters pb-5 mb-xl-3">
+    <!-- Delivery detail -->
+    <div class="col-xl-6 mb-3">
+      <h1 class="h2 mb-4">Checkout</h1>
+      <h2 class="h5 mb-4">Delivery details</h2>
+      <form novalidate [formGroup]="deliveryForm" class="delivery-form">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="firstname">First name</label>
+              <input
+                type="text"
+                class="form-control"
+                pInputText
+                placeholder=""
+                formControlName="firstname"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="lastname">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                pInputText
+                placeholder=""
+                formControlName="lastname"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input
+                type="text"
+                class="form-control"
+                pInputText
+                placeholder=""
+                formControlName="phone"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <label for="email">Email address</label>
+            <input
+              type="text"
+              class="form-control"
+              pInputText
+              placeholder=""
+              formControlName="email"
+            />
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                pInputText
+                placeholder=""
+                formControlName="address"
+              />
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="note">Order note</label>
+              <!-- <input
+                type="text"
+                class="form-control"
+                pInputText
+                placeholder="PLeas"
+                formControlName="address"
+              /> -->
+              <textarea
+                rows="6"
+                class="form-control"
+                placeholder="Please write here any additional information..."
+                formControlName="ordernote"
+                pInputTextarea
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-lg border p-4 my-3">
+          <h2 class="h6 pb-2">Do you have a coupon code?</h2>
+          <div class="d-flex">
+            <input
+              class="form-control mr-3"
+              type="text"
+              pInputText
+              formControlName="couponcode"
+              placeholder="Coupon code"
+              style="width: 75%"
+            />
+            <button class="btn btn-outline-theme" type="button">
+              Apply code
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Order summary + Payment -->
+    <div class="col-xl-5 offset-xl-1 mb-3">
+      <div class="bg-white rounded-lg py-5 px-4 px-sm-5">
+        <h2 class="h5 pb-3">Your order</h2>
+      </div>
+    </div>
+  </section>
+</div>

@@ -17,6 +17,10 @@ const appRoutes: Routes = [
         path: "single",
         component: component.SingleProductComponent,
       },
+      {
+        path: "checkout",
+        component: component.CheckOutComponent,
+      },
     ],
   },
 ];
