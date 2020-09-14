@@ -3,6 +3,19 @@
   background: transparent;
   border: none;
 }
+.active-breadcrumb {
+  &:hover {
+    .p-menuitem-text,
+    .p-menuitem-icon {
+      color: #fe696a !important;
+      text-decoration: none;
+    }
+  }
+}
+
+.p-breadcrumb ul li .p-menuitem-link:focus {
+  box-shadow: 0 0 0 0;
+}
 
 .p-galleria {
   .p-galleria-thumbnail-container {

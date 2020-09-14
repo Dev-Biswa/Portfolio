@@ -7,3 +7,4 @@ export * from "./components/product-slide/product-slide.component";
 export * from "./components/signup-dialog/signup-dialog.component";
 export * from "./components/single-product/single-product.component";
 export * from "./components/checkout/checkout.component";
+export * from "./components/catalog/catalog.component";

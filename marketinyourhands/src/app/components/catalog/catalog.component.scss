@@ -1,9 +1,9 @@
+@import "../product-slide/product-slide.component.scss";
 .p-breadcrumb {
     padding: 0 1rem 1rem 0;
     background: transparent;
     border: none;
 }
-
 .active-breadcrumb {
     &:hover {
         .p-menuitem-text,

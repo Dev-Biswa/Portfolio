@@ -4,6 +4,7 @@
 body {
   font-family: "Rubik", sans-serif !important;
   @include customscrollbar();
+  color: #4b566b;
 }
 
 .p-tooltip {

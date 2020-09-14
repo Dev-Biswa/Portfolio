@@ -32,9 +32,20 @@ export class SingleProductComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-    this.items = [{ label: "Product catalog" }, { label: "Single product" }];
+    this.items = [
+      {
+        label: "Product catalog",
+        routerLink: "/miyh/catalog",
+        styleClass: "active-breadcrumb",
+      },
+      { label: "Single product" },
+    ];
 
-    this.home = { icon: "pi pi-home", routerLink: "/" };
+    this.home = {
+      icon: "pi pi-home",
+      routerLink: "/",
+      styleClass: "active-breadcrumb",
+    };
 
     this.images = [
       {

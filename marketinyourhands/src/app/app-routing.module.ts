@@ -21,6 +21,10 @@ const appRoutes: Routes = [
         path: "checkout",
         component: component.CheckOutComponent,
       },
+      {
+        path: "catalog",
+        component: component.CatalogComponent,
+      },
     ],
   },
 ];

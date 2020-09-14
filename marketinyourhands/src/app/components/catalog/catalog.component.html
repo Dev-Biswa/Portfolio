@@ -1,26 +1,33 @@
-<section class="pt-4">
-  <!-- Heading -->
-  <div
-    *ngIf="isShowHeader"
-    class="d-flex flex-wrap justify-content-between align-items-center pt-1 border-bottom pb-4 mb-4"
+<div class="px-3 pt-2">
+  <!-- breadcrumb -->
+  <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+
+  <section
+    class="d-md-flex justify-content-between align-items-center mb-4 pb-2"
   >
-    <h2 class="h3 mb-0 pt-3 mr-3">{{ heading }}</h2>
-    <div class="pt-3">
-      <a class="btn btn-outline-accent btn-sm" routerLink="/miyh/catalog"
-        >More products <i class="fas fa-angle-right ml-1 mr-n1"></i
-      ></a>
+    <h1 class="h2 mb-3 mb-md-0 mr-3">Product catalog</h1>
+    <div class="d-flex align-items-center">
+      <div
+        class="d-none d-sm-block py-2 font-size-sm text-muted text-nowrap mr-2"
+      >
+        Sort by:
+      </div>
+      <ul class="nav nav-tabs font-size-sm mb-0">
+        <li class="nav-item">
+          <a class="nav-link active">Popular</a>
+        </li>
+        <li class="nav-item"><a class="nav-link">Cheap</a></li>
+        <li class="nav-item"><a class="nav-link">Expensive</a></li>
+      </ul>
     </div>
-  </div>
-  <!-- carousel -->
-  <p-carousel
-    [value]="products"
-    [numVisible]="4"
-    [numScroll]="1"
-    [circular]="false"
-    [responsiveOptions]="responsiveOptions"
-    [circular]="true"
-  >
-    <ng-template let-product pTemplate="item">
+  </section>
+
+  <!-- product section -->
+  <div class="row no-gutters mx-n2">
+    <div
+      class="col-xl-3 col-lg-6 col-md-4 col-sm-6 px-2 mb-3"
+      *ngFor="let product of products"
+    >
       <div class="product-item card product-card pb-3">
         <div class="product-item-content">
           <span class="badge badge-theme badge-shadow"> Sale</span>
@@ -57,6 +64,6 @@
           </div>
         </div>
       </div>
-    </ng-template>
-  </p-carousel>
-</section>
+    </div>
+  </div>
+</div>

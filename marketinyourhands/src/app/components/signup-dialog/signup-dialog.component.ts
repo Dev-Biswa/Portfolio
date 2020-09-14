@@ -41,6 +41,6 @@ export class SignUpDialogComponent implements OnInit {
   }
 
   onHide(event: boolean) {
-    this.close.emit(event);
+    this.close.emit(false);
   }
 }
