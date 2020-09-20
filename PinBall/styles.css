@@ -3,7 +3,14 @@
     margin: 0;
 }
 canvas {
-    background: #eee;
+    background: #a9a9a952;
     display: block;
-    margin: 0 auto;
+    margin: 100px auto;
+}
+
+body {
+    background-image: url("./images/gaming.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }

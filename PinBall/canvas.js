@@ -1,14 +1,14 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var x = canvas.width / 2;
-var y = canvas.height - 30;
-var dx = 2;
-var dy = -2;
+var y = canvas.height - 50;
+var dx = 3;
+var dy = -3;
 var ballRadius = 10;
 
 // paddle
 var paddleHeight = 10;
-var paddleWidth = 75;
+var paddleWidth = 100;
 var paddleX = (canvas.width - paddleWidth) / 2;
 
 // key
@@ -17,7 +17,7 @@ var leftPressed = false;
 
 // brick
 var brickRowCount = 3;
-var brickColumnCount = 5;
+var brickColumnCount = 6;
 var brickWidth = 75;
 var brickHeight = 20;
 var brickPadding = 10;
@@ -65,7 +65,7 @@ function mouseMoveHandler(e) {
   }
 }
 
-function drwaBricks() {
+function drawBricks() {
   for (var c = 0; c < brickColumnCount; c++) {
     for (var r = 0; r < brickRowCount; r++) {
       if (bricks[c][r].status == 1) {
@@ -75,7 +75,7 @@ function drwaBricks() {
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
+        ctx.fillStyle = "#FF52D7";
         ctx.fill();
         ctx.closePath();
       }
@@ -86,7 +86,7 @@ function drwaBricks() {
 function drawPaddle() {
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#FF52D7";
   ctx.fill();
   ctx.closePath();
 }
@@ -94,7 +94,7 @@ function drawPaddle() {
 function drawBall() {
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
+  ctx.fillStyle = "#FFFFFF";
   ctx.fill();
   ctx.closePath();
 }
@@ -125,20 +125,20 @@ function collisionDetection() {
 }
 
 function drawScore() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
+  ctx.font = "20px 'Comic Sans MS', cursive, sans-serif";
+  ctx.fillStyle = "#FFFFFF";
   ctx.fillText("Score: " + score, 8, 20);
 }
 
 function drawLives() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
+  ctx.font = "20px 'Comic Sans MS', cursive, sans-serif";
+  ctx.fillStyle = "#FFFFFF";
+  ctx.fillText("Lives: " + lives, canvas.width - 85, 20);
 }
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drwaBricks();
+  drawBricks();
   drawBall();
   drawPaddle();
   drawScore();
