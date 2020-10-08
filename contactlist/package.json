@@ -4,7 +4,8 @@
   "description": "a simple mean application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
   },
   "author": "biswa",
   "license": "ISC",
@@ -13,6 +14,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.7",
-    "nodemon": "^2.0.4"
+    "netlify-lambda": "^2.0.1",
+    "nodemon": "^2.0.4",
+    "serverless-http": "^2.6.0"
   }
 }

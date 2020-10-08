@@ -7,6 +7,7 @@ var path = require("path");
 
 var app = express();
 var route = require("./routes/route");
+const serverless = require("serverless-http");
 
 // port number
 const port = 3000;
@@ -35,7 +36,7 @@ app.use(bodyparser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // routes
-app.use("/api", route);
+app.use("/.netlify/functions/api", route);
 
 // testing server
 app.get("/", (req, res) => {
@@ -45,3 +46,6 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log("server started at port " + port);
 });
+
+module.exports = app;
+module.exports.handler = serverless(app);
