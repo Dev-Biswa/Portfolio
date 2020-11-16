@@ -174,7 +174,134 @@ a.yellow:hover, .post a:hover {
     opacity: .75;
 }
 
+.blog-list, .project-list {
+    padding-top: 6em;
+    padding-bottom: 1em;
+}
 
+.border {
+    border-top: 1px solid #f0eeee;
+}
+
+ul.no-bullet li {
+    list-style: none;
+}
+
+.project-list li {
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #f0eeee;
+}
+
+.post-list li a {
+    text-decoration: none;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 3em;
+}
+
+.card .overlay-button {
+    opacity: 0;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    -webkit-transform: translate(-50%,-10%);
+    -moz-transform: translate(-50%,-10%);
+    -ms-transform: translate(-50%,-10%);
+    -o-transform: translate(-50%,-10%);
+    transform: translate(-50%,-10%);
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    transition: all .25s ease;
+    z-index: 3;
+}
+
+.cta-button {
+    border-radius: 5px;
+    border: 1px solid #ab2537fa;
+    padding: 1em 1.5em;
+    display: inline-block;
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0 1em;
+    margin-bottom: 1em;
+    min-width: 10em;
+    transition: all .25s ease;
+}
+
+.card .overlay {
+    opacity: 0;
+    position: absolute;
+    background-color: #000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.card:hover .overlay {
+    opacity: .8;
+}
+
+.card:hover .overlay-button {
+    opacity: 1;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.arrow-right {
+    padding-left: 10px;
+}
+
+.arrow-right, .arrow-left {
+    display: inline-block;
+    transition: all .25s ease;
+}
+
+.card img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+    background-color: #f0eeee;
+}
+
+footer, .cta-section {
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 4em;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+bold{
+    font-weight: 700;
+}
+
+ul.no-bullet li:last-child {
+    border-bottom: 0;
+}
 
 @media (min-width: 600px){
     .site-logo {
